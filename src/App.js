@@ -18,7 +18,7 @@ class App extends Component {
     this.performSearch();
   }
 
-  performSearch = (query = "puppy") => {
+  performSearch = (query = "Travel") => {
     this.unsplash.search
       .photos(query, 1)
       .then(toJson)
@@ -35,6 +35,10 @@ class App extends Component {
   render() {
     return (
       <div className="main container">
+        <header>
+          <h1 className="product-title">Wanderlust</h1>
+        </header>
+
         <Search onSearch={this.performSearch} />
         <ImgList data={this.state.imgs} />
       </div>

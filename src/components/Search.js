@@ -15,7 +15,7 @@ export default class Search extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.setState({ value: event.value });
-    //this.props.onSearch(this.state.value);
+    this.props.onSearch(this.state.value);
   }
 
   render() {
@@ -23,7 +23,7 @@ export default class Search extends Component {
       <form className="search" onSubmit={this.handleSubmit}>
         <input
           type="text"
-          placeholder="Search.."
+          placeholder="Search (e.g. Puppy, Ocean, Thailand, etc.) "
           name="search"
           onChange={this.handleChange}
         />
