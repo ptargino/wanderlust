@@ -2,14 +2,10 @@ import React, { Component } from "react";
 import ImgList from "./components/ImgList";
 import Search from "./components/Search";
 import Unsplash, { toJson } from "unsplash-js";
+import { auth } from "./components/auth";
 
 class App extends Component {
-  unsplash = new Unsplash({
-    applicationId:
-      "2b65e1adcda9315e0d0c6a49a9ab14d6b4b77f27c2a789d1fbcccf7647afd54c",
-    secret: "43b806d9ecbc8139339ae984e1a81249d34b6b51ef40311c7efc0af9d09d67c9",
-    callbackUrl: "{CALLBACK_URL}"
-  });
+  unsplash = new Unsplash({ ...auth });
 
   constructor() {
     super();
