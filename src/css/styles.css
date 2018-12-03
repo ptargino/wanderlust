@@ -21,7 +21,7 @@ body {
 
 .product-title {
   font-family: "Yatra One", sans-serif;
-  font-size: 600%;
+  font-size: calc(2.5em + 1.5vw);
   text-align: center;
   color: crimson;
 }
@@ -56,6 +56,5 @@ form.search button {
 }
 
 .photo {
-  display: inline-block;
   margin: 0.5em;
 }

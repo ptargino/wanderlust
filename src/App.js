@@ -34,12 +34,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="main container">
+      <div className="main container-fluid">
         <header>
-          <h1 className="product-title">Wanderlust</h1>
-        </header>
+          <div className="row">
+            <div className="col-lg-4 w-100">
+              <h1 className="product-title ">Wanderlust</h1>
+            </div>
 
-        <Search onSearch={this.performSearch} />
+            <div className="col-lg-8">
+              <Search onSearch={this.performSearch} />
+            </div>
+          </div>
+        </header>
         <ImgList data={this.state.imgs} />
       </div>
     );

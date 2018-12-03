@@ -20,7 +20,7 @@ export default class Search extends Component {
 
   render() {
     return (
-      <form className="search" onSubmit={this.handleSubmit}>
+      <form className="search w-100" onSubmit={this.handleSubmit}>
         <input
           type="text"
           placeholder="Search (e.g. Puppy, Ocean, Thailand, etc.) "
